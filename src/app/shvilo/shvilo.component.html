@@ -1,0 +1,12 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&amp;family=Poppins&amp;display=swap" rel="stylesheet">
+</head>
+<div *ngIf="!p0" class="background">   
+    <div class="background-2 pad-t-b pad-left">
+        <h1 class="marg-bot" >გეომეტრია</h1>
+        <h2 class="marg-bot">VI კლასი</h2>
+        <h3 class="marg-bot">სამკუთხედის ტოლობა</h3>
+        <button class="but" (click)="p0=true">დაწყება</button>
+    </div>
+</div> 
+<app-p1 *ngIf="p0"></app-p1>

@@ -1,0 +1,58 @@
+<div *ngIf="!p2;" class="background">
+    <div class="background-2 pad-t-b pad pad-left pad-rig">
+        <h3 class="marg-bot">იპოვეთ ტოლი სამკუთხედები</h3>
+        <section class="flex">
+            <div class="rel b1 marg-bot">
+                <div class="line abs" style="top: 75%; width: 80px; left: 0px;"></div>
+                <div class="line abs" style="width: 100px; top: 46%; left: 4px; transform: rotate(60deg);"></div>
+                <div class="line-2 abs" style="width: 94px; top: 46%; left: -33px; transform: rotate(-72deg);"></div>
+                <p class="abs" style="top:7px; left: 17px;">A</p>
+                <p class="abs" style="top:106px; left: -17px;">B</p>
+                <p class="abs" style="top:107px; left: 83px;">C</p>
+            </div>
+            <div class="rel b1 marg-bot">
+                <div class="line abs" style="top: 75%; width: 125px; left: 0px;"></div>
+                <div class="line abs" style="width: 131px; top: 46%; left: 11px; transform: rotate(43deg);"></div>
+                <div class="line-2 abs" style="width: 94px; top: 46%; left: -33px; transform: rotate(-72deg);"></div>
+                <p class="abs" style="top:7px; left: 17px;">D</p>
+                <p class="abs" style="top:106px; left: -17px;">E</p>
+                <p class="abs" style="top:107px; left: 127px;">F</p>
+            </div>
+            <div class="rel b1 marg-bot">
+                <div class="line abs" style="top: 75%; width: 80px; left: 0px;"></div>
+                <div class="line abs" style="width: 100px; top: 46%; left: 4px; transform: rotate(60deg);"></div>
+                <div class="line-2 abs" style="width: 94px; top: 46%; left: -33px; transform: rotate(-72deg);"></div>
+                <p class="abs" style="top:7px; left: 17px;">G</p>
+                <p class="abs" style="top:106px; left: -17px;">H</p>
+                <p class="abs" style="top:107px; left: 83px;">I</p>
+            </div>
+            <div class="rel b1 marg-bot">
+                <div class="line abs" style="top: 45%; width: 174px; left: -12px;transform: rotate(-31deg)"></div>
+                <div class="line abs" style="width: 120px; top: 16%; left: 28px; transform: rotate(0deg);"></div>
+                <div class="line-2 abs" style="width: 94px; top: 46%; left: -33px; transform: rotate(-72deg);"></div>
+                <p class="abs" style="top:7px; left: 17px;">J</p>
+                <p class="abs" style="top:106px; left: -17px;">K</p>
+                <p class="abs" style="top:10px; left: 151px;">L</p>
+            </div>
+        </section>   
+        <section>
+            <div class="false marg-bot" *ngIf="p1f">არასწორია</div>
+            <button class="but" *ngIf="p1f" (click)="p1f=false; p1b=false" >შემდეგი</button>
+            <div class="true marg-bot" *ngIf="p1r">სწორია</div>
+            <button class="but" *ngIf="p1r" (click)="p2=true" >შემდეგი</button>
+            <button *ngIf="!p1b" class="but marg-bot" (click)="p1f=true; p1b=true">
+                1) ABC და DEF
+            </button>
+            <button *ngIf="!p1b" class="but marg-bot" (click)="p1f=true; p1b=true">
+                1) GHI და JKL
+            </button>
+            <button *ngIf="!p1b" class="but marg-bot" (click)="p1r=true; p1b=true">
+                1) ABC და GHI
+            </button>
+            <button *ngIf="!p1b" class="but marg-bot" (click)="p1f=true; p1b=true">
+                1) JKL და DEF
+            </button>
+        </section>
+    </div>
+</div>  
+<app-p2 *ngIf="p2"></app-p2>

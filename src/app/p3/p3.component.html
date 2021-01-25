@@ -1,0 +1,78 @@
+<div *ngIf="p3" class="background">
+    <div class="background-2 pad-t-b pad pad-left pad-rig">
+        <h3 class="marg-bot">იპოვეთ ტოლი სამკუთხედები</h3>
+        <section class="flex">
+            <div class="rel b1 marg-bot">
+                <div class="line abs" style="top: 75%; width: 80px; left: 0px;"></div>
+                <div class="line abs" style="width: 100px; top: 46%; left: 4px; transform: rotate(60deg);"></div>
+                <div class="line-2 abs" style="width: 94px; top: 46%; left: -33px; transform: rotate(-72deg);"></div>
+                <p class="abs" style="top:7px; left: 17px;">A</p>
+                <p class="abs" style="top:106px; left: -17px;">B</p>
+                <p class="abs" style="top:107px; left: 83px;">C</p>
+                <p class="abs size" style="top:54px; left: 51px; transform: rotate(60deg)">100</p>
+                <p class="abs size" style="top:60px; left: -7px; transform: rotate(-72deg)">94</p>
+                <p class="abs grad" style="top:120px; left: 58px; transform: rotate(0deg)">60*</p>
+                <p *ngIf="p3f" class="abs red" style="top:21px; left: 35px; transform: rotate(0deg)">47*</p>
+                <p *ngIf="p3f" class="abs red" style="top:120px; left: -2px; transform: rotate(0deg)">73*</p>
+            </div>
+            <div class="rel b1 marg-bot">
+                <div class="line abs" style="top: 75%; width: 80px; left: 0px;"></div>
+                <div class="line abs" style="width: 100px; top: 46%; left: 4px; transform: rotate(60deg);"></div>
+                <div class="line-2 abs" style="width: 94px; top: 46%; left: -33px; transform: rotate(-72deg);"></div>
+                <p class="abs" style="top:7px; left: 17px;">D</p>
+                <p class="abs" style="top:106px; left: -17px;">E</p>
+                <p class="abs" style="top:107px; left: 83px;">F</p>
+                <p class="abs size" style="top:54px; left: 51px; transform: rotate(60deg)">100</p>
+                <p class="abs size" style="top:60px; left: -7px; transform: rotate(-72deg)">94</p>
+                <p class="abs grad" style="top:21px; left: 35px; transform: rotate(0deg)">48*</p>
+                <p *ngIf="p3f" class="abs red" style="top:120px; left: -2px; transform: rotate(0deg)">71*</p>
+                <p *ngIf="p3f" class="abs red" style="top:120px; left: 58px; transform: rotate(0deg)">61*</p>
+            </div>
+            <div class="rel b1 marg-bot">
+                <div class="line abs" style="top: 75%; width: 80px; left: 0px;"></div>
+                <div class="line abs" style="width: 100px; top: 46%; left: 4px; transform: rotate(60deg);"></div>
+                <div class="line-2 abs" style="width: 94px; top: 46%; left: -33px; transform: rotate(-72deg);"></div>
+                <p class="abs" style="top:7px; left: 17px;">G</p>
+                <p class="abs" style="top:106px; left: -17px;">H</p>
+                <p class="abs" style="top:107px; left: 83px;">I</p>
+                <p class="abs size" style="top:54px; left: 51px; transform: rotate(60deg)">100</p>
+                <p class="abs grad" style="top:120px; left: 58px; transform: rotate(0deg)">60*</p>
+                <p class="abs grad" style="top:21px; left: 35px; transform: rotate(0deg)">48*</p>
+                <p *ngIf="p3f" class="abs green" style="top:120px; left: -2px; transform: rotate(0deg)">72*</p>
+            </div>
+            <div class="rel b1 marg-bot">
+                <div class="line abs" style="top: 75%; width: 80px; left: 0px;"></div>
+                <div class="line abs" style="width: 100px; top: 46%; left: 4px; transform: rotate(60deg);"></div>
+                <div class="line-2 abs" style="width: 94px; top: 46%; left: -33px; transform: rotate(-72deg);"></div>
+                <p class="abs" style="top:7px; left: 17px;">J</p>
+                <p class="abs" style="top:106px; left: -17px;">K</p>
+                <p class="abs" style="top:107px; left: 83px;">L</p>
+                <p class="abs size" style="top:54px; left: 51px; transform: rotate(60deg)">100</p>
+                <p class="abs grad" style="top:120px; left: -2px; transform: rotate(0deg)">72*</p>
+                <p class="abs grad" style="top:21px; left: 35px; transform: rotate(0deg)">48*</p>
+                <p *ngIf="p3f" class="abs green" style="top:120px; left: 58px; transform: rotate(0deg)">60*</p>
+            </div>
+        </section>   
+        <section>
+            <div class="false marg-bot" *ngIf="p3f">არასწორია. უნდა გამოგეთვალა JKL სამკუთხედის მესამე კუთხე, რომელიც ტოლობის ნიშანს გაპოვნინებდა.</div>
+            <button class="but" *ngIf="p3f" (click)="p3f=false; p3b=false; p31=true; p3=false" >შემდეგი</button>
+            <div class="true marg-bot" *ngIf="p3r">სწორია</div>
+            <button class="but" *ngIf="p3r" (click)="p4=true; p3=false" >შემდეგი</button>
+            <button *ngIf="!p3b" class="but marg-bot" (click)="p3f=true; p3b=true">
+                1) ABC და DEF
+            </button>
+            <button *ngIf="!p3b" class="but marg-bot" (click)="p3r=true; p3b=true">
+                2) GHI და JKL
+            </button>
+            <button *ngIf="!p3b" class="but marg-bot" (click)="p3f=true; p3b=true">
+                3) ABC და GHI
+            </button>
+            <button *ngIf="!p3b" class="but marg-bot" (click)="p3f=true; p3b=true">
+                4) JKL და ABC
+            </button>
+        </section>
+    </div>
+</div>  
+<app-p4 *ngIf="p4"></app-p4>
+<app-p31 *ngIf="p31"></app-p31>
+
